@@ -26,7 +26,7 @@ namespace TDDCursusLibraryTest
             Statistiek.Gemiddelde(new decimal[] { });
         }
 
-        [TestMethod, ExpectedException(typeof(ArgumentException))]
+        [TestMethod, ExpectedException(typeof(ArgumentNullException))]
         public void HetGemiddeldeVanNullKanJeNietBerekenen()
         {
             Statistiek.Gemiddelde(null);
