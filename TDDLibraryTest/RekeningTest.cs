@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using TDDCursusLibrary;
 
-namespace TDDLibraryTest
+namespace TDDCursusLibraryTest
 {
     [TestClass]
     public class RekeningTest

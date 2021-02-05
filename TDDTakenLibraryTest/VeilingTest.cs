@@ -39,7 +39,7 @@ namespace TDDTakenLibraryTest
             veiling.DoeBod(bod2);
             var bod3 = 200m;
             veiling.DoeBod(bod3);
-            Assert.AreEqual(bod3, veiling.HoogsteBod);
+            Assert.AreNotEqual(bod3, veiling.HoogsteBod);
         }
     }
 }

@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TDDCursusLibrary;
 
-namespace TDDLibraryTest
+namespace TDDCursusLibraryTest
 {
     [TestClass]
     public class JaarTest
