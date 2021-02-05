@@ -6,6 +6,7 @@ namespace TDDCursusLibrary
 {
     public class LandService
     {
+        // private LandDAO landDAO = new LandDAO();
         private readonly ILandDAO landDAO;
         // Constructor 
         public LandService(ILandDAO landDAO)
@@ -14,7 +15,11 @@ namespace TDDCursusLibrary
         }
         public decimal FindVerhoudingOppervlakteLandTovOppervlakteAlleLanden(string landcode)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+
+            var land = landDAO.Read(landcode);
+            var oppervlakteAlleLanden = landDAO.OppervlakteAlleLanden();
+            return (decimal)land.Oppervlakte / oppervlakteAlleLanden;
         }
     }
 }

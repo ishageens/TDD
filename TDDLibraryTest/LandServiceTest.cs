@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TDDCursusLibrary;
 
 namespace TDDCursusLibraryTest
@@ -11,6 +8,7 @@ namespace TDDCursusLibraryTest
     {
         private ILandDAO landDAO; // Stub 
         private LandService landService; // Te testen class 
+
         [TestInitialize]
         public void Initialize()
         {
