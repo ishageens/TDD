@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using TDDCursusLibrary;
 
 namespace TDDLibraryTest
@@ -39,7 +40,17 @@ namespace TDDLibraryTest
             var bedrag2 = 1m;
             rekening.Storten(bedrag2);
             Assert.AreEqual(bedrag1 + bedrag2, rekening.Saldo);
+        }
 
+        [TestMethod, ExpectedException(typeof(ArgumentException))]
+        public void HetBedragVanEenStortingMagNietNulZijn()
+        {
+            rekening.Storten(decimal.Zero);
+        }
+        [TestMethod, ExpectedException(typeof(ArgumentException))]
+        public void HetBedragVanEenStortingMagNietNegatiefZijn()
+        {
+            rekening.Storten(-1m);
         }
     }
 }
